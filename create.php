@@ -24,8 +24,13 @@ $writer = new Csv_Writer(STDOUT, new Csv_Dialect(array(
 $writer->writeRow($headerRow);
 for($i=1; $i<=$number; $i++) {
     $productRow = array_merge($seedRow, array(
-        'sku' => 'sku-'.$i,
+        'sku' => "sku-{$i}",
         'name' => 'product '.$i,
+        '_type' => 'simple',
+        'image' => "/img{$i}.jpg",
+        'thumbnail' => "/img{$i}.jpg",
+        'small_image' => "/img{$i}.jpg",
+        'price' => rand(10, 200),
     ));
     $writer->writeRow($productRow);
 }
