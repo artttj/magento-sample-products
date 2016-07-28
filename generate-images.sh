@@ -1,7 +1,7 @@
 #!/bin/sh
 
-DIRNAME=$2
-COUNT=$1
+DIRNAME=$1
+COUNT=$2
 
 if [ -z  "$COUNT" ]; then
     COUNT=10
