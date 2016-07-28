@@ -5,7 +5,14 @@ I had a need to create 100s or even 1,000s of Magento products for debugging pur
 
 Usage
 =====
-Call it on the command line as you would expect:
+
+First, generate images for your products:
+
+```
+sh generate-images.sh {magento-dir}/media/import {number}
+```
+
+Then call it on the command line as you would expect:
 
 ```
 php create.php
